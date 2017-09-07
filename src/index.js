@@ -65,8 +65,8 @@ class AppStore {
  */
 const VeamsStore = {
 	pluginName: 'Store',
-	initialize: function (Veams, options) {
-		store = new AppStore(options.reducer, options.state, options.subjects);
+	initialize: function (Veams, {reducer, state, subjects}) {
+		store = new AppStore(reducer, state, subjects);
 	}
 };
 
