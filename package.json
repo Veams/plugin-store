@@ -43,7 +43,5 @@
 		"url": "https://github.com/veams/veams-plugin-store/issues"
 	},
 	"homepage": "http://veams.org/",
-	"dependencies": {
-		"lodash": "^4.17.4"
-	}
+	"dependencies": {}
 }
