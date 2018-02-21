@@ -1,22 +1,43 @@
 'use strict';
+
+/**
+ * Imports
+ */
 import Subject from './subject';
 
+/**
+ * Interfaces
+ */
+export interface StoreOptions {
+	reducer: any,
+	state: object,
+	subjects: object
+}
+
+export interface StorePlugin {
+	pluginName: string,
+	initialize: any
+}
+
+/**
+ * Internal data management
+ */
 let store;
 let internalState = {};
-let internalReducer = () => {
+let internalReducer = (action?: string, payload?: any) => {
 };
 let internalSubjects = {};
 
 /**
  * Broadcast functions
  */
-function broadcastAll(subjects) {
+function broadcastAll(subjects: object = internalSubjects): void {
 	Object.keys(subjects).forEach(subject => {
-		subject.next(internalState[subject]);
+		subjects[subject].next(internalState[subject]);
 	});
 }
 
-function broadcast(subject) {
+function broadcast(subject): void {
 	internalSubjects[subject].next(internalState[subject]);
 }
 
@@ -63,9 +84,9 @@ class AppStore {
 /**
  * Plugin
  */
-const VeamsStore = {
+const VeamsStore: StorePlugin = {
 	pluginName: 'Store',
-	initialize: function (Veams, {reducer, state, subjects}) {
+	initialize: function (Veams, {reducer, state, subjects}: StoreOptions) {
 		store = new AppStore(reducer, state, subjects);
 	}
 };
@@ -73,5 +94,5 @@ const VeamsStore = {
 /**
  * Exports
  */
-export {broadcast, broadcastAll, internalState as state, store, Subject};
+export { broadcast, broadcastAll, internalState as state, store, Subject };
 export default VeamsStore;

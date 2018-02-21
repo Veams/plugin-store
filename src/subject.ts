@@ -1,7 +1,5 @@
 export default class Subject {
-	constructor() {
-		this.observers = [];
-	}
+	observers = [];
 
 	subscribe(obs) {
 		this.observers.push(obs);
