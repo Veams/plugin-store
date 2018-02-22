@@ -1,6 +1,6 @@
 {
 	"name": "@veams/plugin-store",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A simple store implementation for Veams by using almost the same naming convention like in Redux.",
 	"main": "./lib/index.js",
 	"types": "./lib/index.d.ts",
