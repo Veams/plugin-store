@@ -1,3 +1,8 @@
+[//]: # ({{#wrapWith "content-section"}})
+
+[//]: #     ({{#wrapWith "grid-row"}})
+[//]: #         ({{#wrapWith "grid-col" colClasses="is-col-mobile-l-8"}})
+
 # Veams Store Plugin (`@veams/plugin-store`)
 
 A simple store implementation for Veams by using almost the same naming convention like in Redux.
@@ -13,6 +18,8 @@ For larger projects we recommend Redux.
 
 TypeScript is supported. 
 
+------------------
+
 ## Installation
 
 ### NPM
@@ -26,6 +33,8 @@ npm install @veams/plugin-store --save
 ``` bash 
 yarn add @veams/plugin-store
 ```
+
+------------------
 
 ## Usage
 
@@ -203,3 +212,8 @@ class ListView extends Component {
 
 export default ListView;
 ```
+
+[//]: #         ({{/wrapWith}})
+[//]: #     ({{/wrapWith}})
+
+[//]: # ({{/wrapWith}})
