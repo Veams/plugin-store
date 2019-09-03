@@ -3,6 +3,8 @@
 [//]: #     ({{#wrapWith "grid-row"}})
 [//]: #         ({{#wrapWith "grid-col" colClasses="is-col-tablet-l-8"}})
 
+# !!!Deprecated!!! Use `@veams/rx-store` or Redux ...
+
 # Veams Store Plugin (`@veams/plugin-store`)
 
 A simple store implementation for Veams by using almost the same naming convention like in Redux.
